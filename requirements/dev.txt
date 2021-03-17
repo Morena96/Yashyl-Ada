@@ -1,0 +1,5 @@
+-r _base.txt
+
+django-debug-toolbar
+pytest-django
+pytest

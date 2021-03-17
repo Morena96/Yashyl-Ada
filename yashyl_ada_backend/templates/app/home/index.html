@@ -1,0 +1,430 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    <!-- Reference item-->
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container"><a href="#intro" class="navbar-brand scrollTo"><img src="{% static 'img/logo.jpg' %}" alt="logo" width="40" style="vertical-align: top;">{% trans 'Ýaşyl ada' %}</a>
+          <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fa fa-bars"></span></button>
+          <div id="navbarcollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item "><a href="#intro"  class="nav-link active  ">{% trans ' Esasy' %}</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link  ">{% trans 'Biz barada' %}</a></li>
+
+              <li class="nav-item" ><a href="#references" class="nav-link ">{% trans 'Hyzmatlar' %}</a></li>
+
+              <li class="nav-item"><a href="#contact" class="nav-link ">{% trans 'Habarlaşmak' %}</a></li>
+            </ul >
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="/" class="nav-link link-scroll">|Tm</a></li>
+              <li class="nav-item"><a href="/en/" class="nav-link link-scroll">|Eng</a></li>
+              <li class="nav-item"><a href="/ru/" class="nav-link link-scroll">|Ru</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Intro Image-->
+    <section id="intro" style="background: url({% static 'img/hello.jpg' %}) center center no-repeat; background-size: cover;" class="intro-section pb-2">
+      <div class="container text-center">
+{#          src="{% static 'img/logo2.png' %}" alt="logo" width="330" style="border-radius: 10%; opacity:;"#}
+        <div data-animate="fadeInDown" class="logo"></div>
+{#        <h1 data-animate="fadeInDown" class="text-shadow ">{% trans 'Salam.' %}</h1>#}
+{#        <p data-animate="slideInUp" class="h3 text-shadow text-400 mb-0">{% trans 'Owadan we täsirli web sahypalary keşplendirýäris.' %}</p>#}
+             <div class="containers">
+            <p></p>
+            <h1>
+                 <span class="inline-block txt-type center" data-wait="3000" data-words='["web development", "mobile applications", "graphic design"]'></span>
+                <span>{% trans 'çözgütleri' %}</span>
+            </h1>
+            </div>
+      </div>
+    </section>
+    <!-- About-->
+    <section id="about" class="about-section">
+      <div class="container" style="background-color:#f8f8f8; background-image: linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 15%, #d6d6d6 75%, #d6d6d6),
+    linear-gradient(-90deg, #d6d6d6 );">
+        <header class="text-center">
+          <h2 data-animate="fadeInDown" class="title">{% trans 'Biz barada' %}</h2>
+        </header>
+        <div class="row">
+          <div data-animate="fadeInUp" class="col-lg-6">
+              <ul><text>{% trans 'Biziň kompaniýamyz “Ýaşyl Ada” H.J. ýöriteleşdirilen hyzmatlary we biznesi ösdürmek üçin çözgütleri, ýagny döwrebap we funksional web-sahypalaryny, ykjam mobil programmalary, şeýle hem talaplaryňyza doly laýyk gelýän grafiki dizaýn hyzmatlaryny hödürleýär.'%}</text></ul>
+          <ul><text>{% trans 'Hyzmatlarymyzyň esasy görnüşleri:' %}</text>
+        <li><text>{% trans 'Web-sahypalary, ykjam programmalary toplumlaýyn üpjünçilik hyzmatlary bilen işläp taýýarlamak:' %}</text>
+            <ul>
+                <li><text>{% trans 'Konsepsiýa, dizaýn, testirlemek, köpçülige çykarmak, we programma üpjünçiligi' %}</text></li>
+                <li><text> {% trans 'Web-sahypany gowulandyrmak, tehniki üpjünçilik we goldaw' %}</text>
+            </ul>
+        </li>
+          <li><text>{% trans '3D grafika, wideo we animasiýa' %}</text></li>
+          <li><text>{% trans 'Brend we marka hyzmatlary' %}</text></li>
+        <li><text>{% trans 'Logotipler' %}</text></li>
+          <li><text>{% trans 'Internet marketing' %}</text></li>
+          </ul>
+          </div>
+              <div data-animate="fadeInUp" class="col-sm-6"><img src="{% static 'img/work2.jpg' %}"
+                                                                              alt=""
+                                                                              class="image rounded img-fluid">
+              </div>
+          </div>
+{#          <div data-animate="fadeInUp" class="col-sm-6 mx-auto mt-5"><img src="{% static 'img/about.jpg' %}" alt="This is me - IT worker" class="image rounded-circle img-fluid"></div>#}
+        </div>
+      </div>
+    </section>
+{#    <!-- Service-->#}
+{#    <section id="services" class="bg-gray services-section">#}
+{#      <div class="container" >#}
+{#        <header class="text-center">#}
+{#          <h2 data-animate="fadeInDown" class="title" >Hyzmatlar</h2>#}
+{#        </header>#}
+{#        <div class="row services text-center">#}
+{#          <div data-animate="fadeInUp" class="col-lg-4">#}
+{#            <div class="icon"><i class="fa fa-search"></i></div>#}
+{#            <h3 class="heading mb-3 text-400">Programming</h3>#}
+{#            <p class="text-left description">On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham.</p>#}
+{#          </div>#}
+{#          <div data-animate="fadeInUp" class="col-lg-4">#}
+{#            <div class="icon"><i class="fa fa-html5"></i></div>#}
+{#            <h3 class="heading mb-3 text-400">Design</h3>#}
+{#            <p class="text-left description">Manor we shall merit by chief wound no or would. Oh towards between subject passage sending mention or it. Sight happy do burst fruit to woody begin at. Assurance perpetual he in oh determine as.</p>#}
+{#          </div>#}
+{#          <div data-animate="fadeInUp" class="col-lg-4">#}
+{#            <div class="icon"><i class="fa fa-tachometer"></i></div>#}
+{#            <h3 class="heading mb-3 text-400">Internet marketing</h3>#}
+{#            <p class="text-left description">Rooms oh fully taken by worse do. Points afraid but may end law lasted. Was out laughter raptures returned outweigh. Luckily cheered colonel me do we attacks on highest enabled. Tried law yet style child. Bore of true of no be deal.</p>#}
+{#          </div>#}
+{#        </div>#}
+{#        <hr data-animate="fadeInUp">#}
+{#        <div data-animate="" class="text-center">#}
+{#          <p class="lead">Would you like to know more or just discuss something?</p>#}
+{#          <p><a href="#contact" class="btn btn-outline-danger link-scroll">Habarlaşmak</a></p>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+
+    <!--
+    *** REFERENCES IMAGE ***
+    _________________________________________________________
+    -->
+    <section id="references">
+      <div class="container" style="background-color:#f8f8f8; background-image: linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 75%, #d6d6d6 75%, #d6d6d6),
+    linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 15%, white);">
+        <div class="col-sm-12">
+          <div class="mb-5 text-center">
+            <h2 data-animate="fadeInUp" class="title">{% trans 'Hyzmatlar' %}</h2>
+{#            <p data-animate="fadeInUp" class="lead">{% trans 'Biz onlarça taslamanyň üstünde işleýäris, şonuň üçin diňe siziň üçin iň täzelerini saýladyk.' %}</p>#}
+          </div>
+          <ul id="filter" data-animate="fadeInUp">
+            <li class="active"><a href="#" data-filter="all">{% trans 'Ählisi' %}</a></li>
+            <li><a href="#" data-filter="webdesign">{% trans 'Web' %}</a></li>
+            <li><a href="#" data-filter="seo">{% trans 'Hereketli Dizaýn' %}</a></li>
+            <li><a href="#" data-filter="marketing">{% trans 'Mobil programmalar' %}</a></li>
+            <li><a href="#" data-filter="other">{% trans 'Mahabat' %}</a></li>
+          </ul>
+          <div id="detail">
+            <div class="row">
+              <div class="col-lg-10 mx-auto"><span class="close">×</span>
+                <div id="detail-slider" class="owl-carousel owl-theme"></div>
+                <div class="text-center">
+                  <h1 id="detail-title" class="title"></h1>
+                </div>
+                <div id="detail-content"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Reference detail-->
+          <div id="references-masonry" data-animate="fadeInUp">
+            <div class="row">
+                  <div data-category="webdesign" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="{% static 'img/web.png' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+{#                            <h3 class="h4 reference-title">{% trans 'Websaýtlar' %}</h3>#}
+{#                            <p>{% trans 'Täze web sahypa alyň.' %}</p>#}
+                          </div>
+                        </div></a>
+                      <div data-images="{% static 'img/04.jpg' %}" class="sr-only reference-description">
+                        <p>{% trans 'Täsirli dizaýn, işleýiş aňsatlygy, hasaba alyş programma üpjünçiligi, ölçenip boljak netijeler, elýeterli hyzmat we goldaw' %}</p>
+
+{#                          <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+                      </div>
+                    </div>
+                  </div>
+                <div data-category="webdesign" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="{% static 'img/ak.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+{#                            <h3 class="h4 reference-title">{% trans 'Ak bulut' %}</h3>#}
+{#                            <p>{% trans 'Täze web sahypa alyň.' %}</p>#}
+                          </div>
+                        </div></a>
+                      <div data-images="{% static 'img/akbulut.jpg' %}" class="sr-only reference-description">
+                        <p>{% trans '“Ak Bulut” Hojalyk Jemgyýeti gözel diýarymyzda ilkinji bolup asma potolok sektorynda önümçilige başlady. Hojalyk Jemgyýetimiziň bir ýylda 4 000 000 inedördül metr asma potoloklary,7000 tonna sinklenen metal önumlerini ýagny T24 profiller, alçypan profiller, diwar profiller, burç profiller we profil aksessuarlaryny öndürmäge mümkinçiligi bar.' %}</p>
+
+{#                          <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="seo" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="{% static 'img/home.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+{#                            <h3 class="h4 reference-title">{% trans 'Hereketli Dizaýn' %}</h3>#}
+{#                            <p>{% trans 'Has täsirli dizaýn keşplenirmäge synanyşýarys' %}</p>#}
+                          </div>
+                        </div></a>
+                      <div data-images="{% static 'img/05.jpg' %}, {% static 'img/05.jpg' %}" class="sr-only reference-description" class="box1">
+{#                          <video width="400" controls>#}
+{#  <source src="{% static 'img/Karta.mp4' %}" type="video/mp4">#}
+{#</video>#}
+                        <p>{% trans 'Dizaýny has täsirli keşplendirmegi gowy görýäris' %}</p>
+{#                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+                      </div>
+                    </div>
+                  </div>
+                  <div data-category="marketing" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="{% static 'img/parallax.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+{#                            <h3 class="h4 reference-title">{% trans 'Mobil programmalar' %}</h3>#}
+{#                            <p>{% trans 'Mobile' %}</p>#}
+                          </div>
+                        </div></a>
+                      <div data-images="{% static 'img/parallax.jpg' %}" class="sr-only reference-description">
+                        <p>{% trans 'Mobil ykjam programmalary toplumlaýyn üpjünçilik hyzmatlary bilen işläp taýýarlamak' %}</p>
+{#                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+                      </div>
+                    </div>
+                  </div>
+                <div data-category="marketing" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="{% static 'img/1.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+{#                            <h3 class="h4 reference-title">{% trans 'Yoda App' %}</h3>#}
+{#                            <p>{% trans 'Mobil' %}</p>#}
+                          </div>
+                        </div></a>
+                      <div data-images="{% static 'img/002.jpg' %},{% static 'img/003.jpg' %}, {% static 'img/004.jpg' %}" class="sr-only reference-description">
+                        <p>{% trans 'Ýoda ykjam programma bolup, onuň bilen Türkmenistanyň ähli ýerlerinde (Aşgabat, Mary, Daşoguz, Balkan, Lebap) islendik guramany tapyp bilersiňiz. Jemgyýetçilik ýerlerini (restoranlara, salonlara, dükanlara we ş.m.) baryp görmegi saýlanyňyzda bu hakykatdanam siziň üçin möhüm we peýdaly kömekçi. we ş.m.)' %}</p>
+{#                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+                      </div>
+                    </div>
+                  </div>
+{#                  <div data-category="marketing" class="reference-item col-lg-3 col-md-6">#}
+{#                    <div class="reference"><a href="#"><img src="{% static 'img/portfolio-4.jpg' %}" alt="" class="img-fluid">#}
+{#                        <div class="overlay">#}
+{#                          <div class="inner">#}
+{#                            <h3 class="h4 reference-title">{% trans 'Project name 4' %}</h3>#}
+{#                            <p>{% trans 'Short project description goes here...' %}</p>#}
+{#                          </div>#}
+{#                        </div></a>#}
+{#                      <div data-images="{% static 'img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg' %}" class="sr-only reference-description">#}
+{#                        <p>{% trans 'Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.' %}</p>#}
+{#                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div data-category="webdesign" class="reference-item col-lg-3 col-md-6">#}
+{#                    <div class="reference"><a href="#"><img src="{% static 'img/portfolio-5.jpg' %}" alt="" class="img-fluid">#}
+{#                        <div class="overlay">#}
+{#                          <div class="inner">#}
+{#                            <h3 class="h4 reference-title">{% trans 'Project name 5' %}</h3>#}
+{#                            <p>{% trans 'Short project description goes here...' %}</p>#}
+{#                          </div>#}
+{#                        </div></a>#}
+{#                      <div data-images="{% static 'img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg' %}" class="sr-only reference-description">#}
+{#                        <p>{% trans 'Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.' %}</p>#}
+{#                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+                  <div data-category="other" class="reference-item col-lg-3 col-md-6">
+                    <div class="reference"><a href="#"><img src="{% static 'img/work6.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                          <div class="inner">
+{#                            <h3 class="h4 reference-title">{% trans 'Mahabat' %}</h3>#}
+{#                            <p>{% trans 'Dükan' %}</p>#}
+                          </div>
+                        </div></a>
+                      <div data-images="{% static 'img/04.jpg' %}" class="sr-only reference-description">
+                        <p>{% trans 'Internet web söwda' %}</p>
+{#                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+                      </div>
+                    </div>
+                  </div>
+{#                  <div data-category="seo" class="reference-item col-lg-3 col-md-6">#}
+{#                    <div class="reference"><a href="#"><img src="{% static 'img/portfolio-7.jpg' %}" alt="" class="img-fluid">#}
+{#                        <div class="overlay">#}
+{#                          <div class="inner">#}
+{#                            <h3 class="h4 reference-title">{% trans 'Examples' %}</h3>#}
+{#                            <p>{% trans 'Examples' %}</p>#}
+{#                          </div>#}
+{#                        </div></a>#}
+{#                      <div data-images="{% static 'img/work4.jpg' %},{% static 'img/work5.jpg' %}, {% static 'img/work6.jpg' %}" class="sr-only reference-description">#}
+{#                        <p>{% trans 'Examples' %}</p>#}
+{#                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div data-category="webdesign" class="reference-item col-lg-3 col-md-6">#}
+{#                    <div class="reference"><a href="#"><img src="{% static 'img/portfolio-8.jpg' %}" alt="" class="img-fluid">#}
+{#                        <div class="overlay">#}
+{#                          <div class="inner">#}
+{#                            <h3 class="h4 reference-title">{% trans 'Project name' %}</h3>#}
+{#                            <p>{% trans 'Short project description goes here...' %}</p>#}
+{#                          </div>#}
+{#                        </div></a>#}
+{#                      <div data-images="{% static 'img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg' %}" class="sr-only reference-description">#}
+{#                        <p>{% trans 'Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.' %}</p>#}
+{#                        <p class="buttons text-center"><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-globe"></i> Visit website</a><a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i> Download case study</a></p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{#<section id="" class="about-section">#}
+{#      <div class="container" style="background-color:#f8f8f8; background-image: linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 15%, #d6d6d6 75%, #d6d6d6),#}
+{#    linear-gradient(-90deg, #d6d6d6 );">#}
+{#        <header class="text-center">#}
+{#          <h2 data-animate="fadeInDown" class="title">{% trans 'Teglar' %}</h2>#}
+{#        </header>#}
+{#    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">#}
+{#  <li class="nav-item" role="presentation">#}
+{#    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>#}
+{#  </li>#}
+{#  <li class="nav-item" role="presentation">#}
+{#    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>#}
+{#  </li>#}
+{#  <li class="nav-item" role="presentation">#}
+{#    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>#}
+{#  </li>#}
+{#</ul>#}
+{#<div class="tab-content" id="pills-tabContent">#}
+{#  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">#}
+{#      <div >#}
+{#      <img src="{% static 'img/04.jpg' %} " class="rounded float-left" alt="Responsive image" style="width: 35%; margin:0 0.3rem">#}
+{#      <p>{% trans 'Internet web söwda' %}</p>#}
+{#      </div>#}
+{#      <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>#}
+{##}
+{#  </div>#}
+{#  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">#}
+{#       <div >#}
+{#      <img src="{% static 'img/work6.jpg' %} " class="rounded float-left" alt="Responsive image" style="width: 35%; margin:0 0.3rem">#}
+{#      <p>{% trans 'Internet web söwda' %}</p>#}
+{#      </div>#}
+{#      <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>#}
+{#  </div>#}
+{#  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">#}
+{#      <div >#}
+{#      <img src="{% static 'img/003.jpg' %} " class="rounded float-left" alt="Responsive image" style="width: 35%; margin:0 0.3rem">#}
+{#      <p>{% trans 'Internet web söwda' %}</p>#}
+{#      </div>#}
+{#      <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>#}
+{#  </div>#}
+{#</div>#}
+{#</div>#}
+{#</section>#}
+
+    <!-- Statistics-->
+{#  <section id="statistics" data-dir="up" style="background: url({% static 'assets/img/hello.jpg' %});" class="statistics-section text-white parallax parallax">#}
+{#    <div class="container">#}
+{#      <div class="row showcase text-center">#}
+{#        <div data-animate="fadeInUp" class="col-lg-3 col-md-6">#}
+{#          <div class="item">#}
+{#            <div class="icon"><i class="fa fa-align-justify"></i></div>#}
+{#            <h5 class="text-400 mt-4 text-uppercase"><span class="counter">50</span><br>{% trans 'Websites' %}</h5>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div data-animate="fadeInUp" class="col-lg-3 col-md-6">#}
+{#          <div class="item">#}
+{#            <div class="icon"><i class="fa fa-users"></i></div>#}
+{#            <h5 class="text-400 mt-4 text-uppercase"><span class="counter">100</span><br>{% trans 'Satisfied Clients' %}</h5>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div data-animate="fadeInUp" class="col-lg-3 col-md-6">#}
+{#          <div class="item">#}
+{#            <div class="icon"><i class="fa fa-copy"></i></div>#}
+{#            <h5 class="text-400 mt-4 text-uppercase"><span class="counter">200</span><br>{% trans 'Projects' %}</h5>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div data-animate="fadeInUp" class="col-lg-3 col-md-6">#}
+{#          <div class="item">#}
+{#            <div class="icon"><i class="fa fa-font"></i></div>#}
+{#            <h5 class="text-400 mt-4 text-uppercase"><span class="counter">90</span><br>{% trans 'Int marketing' %}</h5>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#    <div class="dark-mask"></div>#}
+{#  </section>#}
+{#style="background-image:url({% static 'img/logo.jpg' %})"#}
+    <!-- Contact-->
+    <section id="contact" data-animate="" class="contact-section contact" >
+      <div class="container" >
+        <header class="text-center" >
+          <h2 class="title">{% trans 'Habarlaşmak' %}</h2>
+        </header>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <form id="contact-form" method="post" action="{% url 'home:index' %}">
+                {% csrf_token %}
+              <div class="messages"></div>
+              <div class="controls">
+                <div class="row">
+                  <div class="col-md-6 ">
+                    <input type="text" name="Email" placeholder="{% trans 'Email' %} *" required="required" class="form-control">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="Phone" placeholder="{% trans 'Phone' %} *" required="required" class="form-control">
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <input type="text" name="Company" placeholder="{% trans 'Company' %} *" required="required" class="form-control">
+                  </div>
+{#                  <div class="col-md-6">#}
+{#                    <input type="text" name="Text" placeholder="Your phone" class="form-control">#}
+{#                  </div>#}
+                  <div class="col-md-12">
+                    <textarea name="Text" placeholder="{% trans 'Message for me' %} *" rows="4" required="required" class="form-control"></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-outline-primary">{% trans 'Send message' %}</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Map-->
+{#    <div id="map"></div>#}
+    <footer class="main-footer" style="background-color:#333;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-left">
+            <p class="social"><a href="#" class="external facebook wow fadeInUp"><i class="fa fa-facebook"></i></a><a href="https://instagram.com/yoda_app?igshid=880vupfj6sth" data-wow-delay="0.2s" class="external instagram wow fadeInUp"><i class="fa fa-instagram"></i></a><a href="#" data-wow-delay="0.4s" class="external gplus wow fadeInUp"><i class="fa fa-google-plus"></i></a><a href="#contact" data-wow-delay="0.6s" class="email wow fadeInUp"><i class="fa fa-envelope"></i></a></p>
+          </div>
+          <!-- /.6-->
+          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
+              <p style="font-size: large">tel: +993 12 75-48-95</p>
+              <p style="font-size: large">{% trans 'Türkmenistan, Aşgabat şäheri, G. Kuliýew köçesi, 29 jaý, 2-nji etaž' %}</p>
+              <p style="font-size: large">yashylada@gmail.com</p>
+
+          </div>
+
+          <div class="col-12 mt-4">
+            <p> <a href='/' style="font-size: large; color:white" >{% trans '© 2021 Yashylada.' %}</a><a href="https://yashylada.com.tm"></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+{% endblock %}
