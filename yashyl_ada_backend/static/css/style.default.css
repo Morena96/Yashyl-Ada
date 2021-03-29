@@ -181,12 +181,12 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
 *
 */
 .intro-section {
-  padding-top: 155px;       /*150 ozal durdy*/
+  padding-top: 150px;       /*150 ozal durdy*/
   color: #fff;
 }
 
 .intro-section .logo, .intro-section p {
-  margin-bottom: 158px;     /*120 ozal durdy*/
+  margin-bottom: 122px;     /*120 ozal durdy*/
 }
 
 @media (min-width: 992px) {
@@ -552,6 +552,9 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
   margin-top: 50px;
 }
 
+.close {
+    cursor: pointer;
+}
 /*
 *
 * =====================
@@ -599,6 +602,7 @@ footer.main-footer {
 /*  clip-path: polygon(-25% 25%, 40% 10%, 100% 15%, 100% 100%, 0% 100%);
 */  border-radius: 20% 0% 0 0;
 
+
 }
 
 footer.main-footer p.social a {
@@ -614,6 +618,7 @@ footer.main-footer p.social a {
   text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+
 }
 
 footer.main-footer p.social a.facebook {
@@ -634,9 +639,11 @@ footer.main-footer p.social a.email {
 
 footer.main-footer p {
   margin: 0;
-  color: #eee;
-  font-family: "Open Sans", serif;
-  font-size: 0.9rem;
+  color: rgb(202,206,191);
+  font-family: ;
+  font-size: 20px;
+  font-weight:700;
+  cursor: pointer;
 }
 
 footer.main-footer p.template-bootstrapious {

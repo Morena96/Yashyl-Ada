@@ -89,12 +89,64 @@ span{
    	margin-top:10rem;
     font-size:3rem;
   }
+  .intro-section {
+    min-height: 75vh;
+  }
+
 }
 
-@media only screen and (min-width: 1601px) and (max-width: 2500px) {
+@media only screen and (min-width: 1601px) and (max-width: 2100px) {
    h1 {
    	margin-top:15rem;
     font-size:4rem;
   }
+  .intro-section {
+    min-height: 75vh;
+  }
+  .container {
+    max-width: 1500px;
+}
 }
  
+@media only screen and (min-width: 2101px) {
+   .container {
+    max-width: 1950px;
+}
+.intro-section {
+    min-height: 75vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: flex-end;
+}
+h1 {
+    font-family: '', sans-serif;
+    font-weight: 300;
+    font-size: 4rem;
+}
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.6rem solid yellow;
+}
+.title {
+    display: inline-block;
+    font-size: 3rem;
+}
+body {
+    font-family: "Helvetica", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+nav.navbar a.nav-link {
+    font-size: 1.5rem;
+}
+.form-control {
+    padding: 0.45rem 0.75rem;
+    font-size: 2rem;
+}
+footer.main-footer p {
+  font-size: 2rem;
+}
+}

@@ -18,7 +18,6 @@ from pathlib import Path
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.translation import gettext_lazy as _
 
-
 PROJECT_NAME = 'yashyl_ada_backend'
 
 with open(os.path.join(os.path.dirname(__file__), 'secrets.json'), 'r') as f:
@@ -61,7 +60,6 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
 ]
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -95,7 +93,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = PROJECT_NAME + '.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -118,7 +115,6 @@ DATABASES = {
     # }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -136,7 +132,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -164,7 +159,6 @@ LANGUAGES = [
     ('ru', _('Russian')),
 ]
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -189,7 +183,6 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-
 # AUTHENTICATION settings
 EMAIL_USE_TLS = True
 
@@ -199,7 +192,6 @@ EMAIL_HOST_USER = get_secret('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = get_secret('EMAIL_HOST_PASSWORD')
 SERVER_EMAIL = get_secret('EMAIL_HOST_USER')
 DEFAULT_FROM_EMAIL = get_secret('EMAIL_HOST_USER')
-
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
@@ -218,30 +210,31 @@ ALLOWED_HOSTS = ['*']
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
 try:
     from .local import *
 except ImportError:
     pass
 
+from ._base import *
 
+DEBUG = False
 
-from ._base import *
-
-DEBUG = False
-
-ALLOWED_HOSTS = ['*']
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_secret('DJANGO_SECRET_KEY')
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-
-try:
-    from .local import *
-except ImportError:
-    pass
+ALLOWED_HOSTS = ['*']
+
+# SECURITY WARNING: keep the secret key used in production secret!
+
+SECRET_KEY = get_secret('DJANGO_SECRET_KEY')
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+try:
+
+    from .local import *
+
+except ImportError:
+
+    pass
